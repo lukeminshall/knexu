@@ -49,7 +49,7 @@ export function closing(h,sub){
   return `<section class="dark"><div class="wrap">
     <div class="shead reveal" style="margin-bottom:0;align-items:center">
       <div><span class="top lbl">${triad}Get in touch</span><h2>${h}</h2></div>
-      <div class="actions" style="margin-top:0"><a class="btn" href="#/contact">Start a conversation</a><a class="btn ghost" href="#/work">See the outcomes</a></div>
+      <div class="actions" style="margin-top:0"><a class="btn" href="/contact">Start a conversation</a><a class="btn ghost" href="/work">See the outcomes</a></div>
     </div>${sub?`<p class="reveal" style="--i:1;max-width:54ch;margin-top:26px;font-weight:300">${sub}</p>`:''}</div></section>`;
 }
 export function page(o){

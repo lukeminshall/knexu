@@ -15,7 +15,7 @@ P['/']=()=>`
       <span class="top lbl rise" style="--i:0">${triad}Strategic growth agency</span>
       <h1 class="big rise" style="--i:1;margin-top:20px">Strategy measured by the <span class="uline">return</span>, not the recommendation<i style="font-style:normal;color:var(--pink)">.</i></h1>
       <p class="lede rise" style="--i:2">We work across sport, health and wellbeing, for academia, public and private organisations. Every engagement is scoped to a number: new revenue, recovered margin or unlocked capital. Where the strategy needs infrastructure that does not exist yet, we build that too, and it earns as well.</p>
-      <div class="actions rise" style="--i:3"><a class="btn" href="#/work">See the outcomes</a><a class="btn ghost" href="#/consultancy">How we work</a></div>
+      <div class="actions rise" style="--i:3"><a class="btn" href="/work">See the outcomes</a><a class="btn ghost" href="/consultancy">How we work</a></div>
     </div>
     <div class="rise" style="--i:2">${gCatchment()}</div>
   </div>
@@ -31,30 +31,30 @@ P['/']=()=>`
 </div></section>
 
 <section class="soft"><div class="wrap">
-  ${shead("Areas","Where we create it.","Three areas we know deeply enough to be accountable for the outcome, not just the advice.",["Consultancy overview","#/consultancy"])}
-  ${indexList(Object.entries(AREAS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:'#'+k})))}
+  ${shead("Areas","Where we create it.","Three areas we know deeply enough to be accountable for the outcome, not just the advice.",["Consultancy overview","/consultancy"])}
+  ${indexList(Object.entries(AREAS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:k})))}
 </div></section>
 
 <section><div class="wrap">
   ${shead("Sectors","Who we create it for.","The same three returns, delivered differently depending on who is buying and what the rules are.")}
-  ${indexList(Object.entries(SECTORS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:'#'+k})))}
+  ${indexList(Object.entries(SECTORS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:k})))}
 </div></section>
 
 <section class="soft"><div class="wrap">
-  ${shead("Selected work","The difference, in the client's words.",null,["All outcomes","#/work"])}
+  ${shead("Selected work","The difference, in the client's words.",null,["All outcomes","/work"])}
   ${workGrid([
-    {tag:"Health · Prime Health",head:"A new revenue line, not a report",graphic:gFunnel(),body:"Self-referral pathways that make diagnostic access faster, easier and more patient-led, removing the barriers at entry that capped direct demand.",ret:"a direct self-pay revenue line and higher conversion of existing demand.",href:"#/health"},
-    {tag:"Sport · Eventmaster",head:"Every ticket, more revenue",graphic:gArea(),body:"A market entry and go-to-market strategy connecting ticketing with retail, fundraising and engagement, unlocking pre-sale and post-event opportunity.",ret:"revenue captured before, during and after the event.",href:"#/sport"},
-    {tag:"Academia · Leeds Beckett",head:"Research, made fundable",graphic:gGrid(),body:"The business delivery plan for a new Sports and Health Technology Incubator: stakeholder engagement, knowledge development and delivery frameworks.",ret:"a roadmap built to unlock funding and industry partnership.",href:"#/academia"}
+    {tag:"Health · Prime Health",head:"A new revenue line, not a report",graphic:gFunnel(),body:"Self-referral pathways that make diagnostic access faster, easier and more patient-led, removing the barriers at entry that capped direct demand.",ret:"a direct self-pay revenue line and higher conversion of existing demand.",href:"/health"},
+    {tag:"Sport · Eventmaster",head:"Every ticket, more revenue",graphic:gArea(),body:"A market entry and go-to-market strategy connecting ticketing with retail, fundraising and engagement, unlocking pre-sale and post-event opportunity.",ret:"revenue captured before, during and after the event.",href:"/sport"},
+    {tag:"Academia · Leeds Beckett",head:"Research, made fundable",graphic:gGrid(),body:"The business delivery plan for a new Sports and Health Technology Incubator: stakeholder engagement, knowledge development and delivery frameworks.",ret:"a roadmap built to unlock funding and industry partnership.",href:"/academia"}
   ])}
 </div></section>
 
 <section><div class="wrap">
-  ${shead("Digital infrastructure","When the return needs building.","Three platforms of our own. Each began as advisory work and became an asset that earns.",["The practice","#/digital"])}
+  ${shead("Digital infrastructure","When the return needs building.","Three platforms of our own. Each began as advisory work and became an asset that earns.",["The practice","/digital"])}
   ${indexList([
-    {t:"DataLense",sub:"Live · datalense.org",d:"Healthcare commercial intelligence: catchment-level market scoring, competitor mapping and a population health profile for any UK postcode.",ret:"better site decisions and capital protected from the wrong location.",href:"#/digital/datalense"},
-    {t:"Straight Talking",sub:"Launching October 2026",d:"Patient-reported outcomes and experience across the whole clinical journey, built for PHIN and PROMs obligations.",ret:"a mandated obligation turned into an evidence asset for insurer and commissioner negotiation.",href:"#/digital/straight-talking"},
-    {t:"Knexusport",sub:"In service",d:"Athlete medical operations for clubs, governing bodies and tournaments: bloods, imaging coordination, medical directories and secure image transfer.",ret:"medical provision run as a managed service instead of a scatter of ad-hoc cost.",href:"#/digital/knexusport"}
+    {t:"DataLense",sub:"Live · datalense.org",d:"Healthcare commercial intelligence: catchment-level market scoring, competitor mapping and a population health profile for any UK postcode.",ret:"better site decisions and capital protected from the wrong location.",href:"/digital/datalense"},
+    {t:"Straight Talking",sub:"Launching October 2026",d:"Patient-reported outcomes and experience across the whole clinical journey, built for PHIN and PROMs obligations.",ret:"a mandated obligation turned into an evidence asset for insurer and commissioner negotiation.",href:"/digital/straight-talking"},
+    {t:"Knexusport",sub:"In service",d:"Athlete medical operations for clubs, governing bodies and tournaments: bloods, imaging coordination, medical directories and secure image transfer.",ret:"medical provision run as a managed service instead of a scatter of ad-hoc cost.",href:"/digital/knexusport"}
   ])}
 </div></section>
 
@@ -75,11 +75,11 @@ P['/consultancy']=()=>page({
   </div></section>
   <section class="soft"><div class="wrap">
     ${shead("Areas","What we work on.")}
-    ${indexList(Object.entries(AREAS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:'#'+k})))}
+    ${indexList(Object.entries(AREAS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:k})))}
   </div></section>
   <section><div class="wrap">
     ${shead("Sectors","Who we work with.")}
-    ${indexList(Object.entries(SECTORS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:'#'+k})))}
+    ${indexList(Object.entries(SECTORS).map(([k,v])=>({t:v.t,sub:v.sub,d:v.d,ret:v.ret,href:k})))}
   </div></section>
   <section class="soft"><div class="wrap">
     ${shead("How we engage","Four things we hold to.")}
@@ -124,11 +124,11 @@ P['/digital']=()=>page({
   lede:"Three platforms of our own, plus bespoke builds for clients. Each turns a strategy into a live, revenue-bearing asset rather than a document that describes one.",
   body:`
   <section><div class="wrap">
-    ${shead("Platforms","What we own and operate.",null,["How we build","#/digital/how-we-build"])}
+    ${shead("Platforms","What we own and operate.",null,["How we build","/digital/how-we-build"])}
     ${indexList([
-      {t:"DataLense",sub:"Live · datalense.org",d:"Healthcare commercial intelligence. Four live toolkits over any UK drivetime catchment: health commercials, population health, workforce and market trends.",ret:"sharper site decisions and capital protected from the wrong location.",href:"#/digital/datalense"},
-      {t:"Straight Talking",sub:"Launching October 2026",d:"Patient-reported outcomes and experience across the whole clinical journey, built for PHIN and PROMs reporting obligations.",ret:"a compliance obligation turned into an evidence asset for negotiation.",href:"#/digital/straight-talking"},
-      {t:"Knexusport",sub:"In service",d:"Athlete medical operations for clubs, governing bodies and tournaments. Blood panels, imaging coordination, medical directories and secure image transfer.",ret:"medical run as a managed service, not scattered ad-hoc cost.",href:"#/digital/knexusport"}
+      {t:"DataLense",sub:"Live · datalense.org",d:"Healthcare commercial intelligence. Four live toolkits over any UK drivetime catchment: health commercials, population health, workforce and market trends.",ret:"sharper site decisions and capital protected from the wrong location.",href:"/digital/datalense"},
+      {t:"Straight Talking",sub:"Launching October 2026",d:"Patient-reported outcomes and experience across the whole clinical journey, built for PHIN and PROMs reporting obligations.",ret:"a compliance obligation turned into an evidence asset for negotiation.",href:"/digital/straight-talking"},
+      {t:"Knexusport",sub:"In service",d:"Athlete medical operations for clubs, governing bodies and tournaments. Blood panels, imaging coordination, medical directories and secure image transfer.",ret:"medical run as a managed service, not scattered ad-hoc cost.",href:"/digital/knexusport"}
     ])}
   </div></section>
   <section class="soft"><div class="wrap">
@@ -171,10 +171,10 @@ P['/digital/datalense']=()=>page({
   <section><div class="wrap">
     ${shead("Toolkits","Four toolkits, one catchment.","All four are live. Each answers a different question about the same drivetime catchment, and the underlying data is expanding continuously.")}
     ${indexList([
-      {t:"Health Commercials",d:"Competitor and provider landscape, activity and waiting-time pressure, catchment demographics and a weighted market score, ranked against comparable commercial locations.",href:"#/contact"},
-      {t:"Population Health",d:"Disability, long-term conditions, qualifications, car dependency and overcrowding, expressed as ranked deviations from a national sample of 200 comparison catchments.",href:"#/contact"},
-      {t:"Workforce",d:"Clinical and support workforce availability and pressure across the catchment, so a site decision accounts for whether it can actually be staffed.",href:"#/contact"},
-      {t:"General Trends",d:"Wider market movement, demand and activity trends shaping the catchment over time, so the picture is not just a single snapshot.",href:"#/contact"}
+      {t:"Health Commercials",d:"Competitor and provider landscape, activity and waiting-time pressure, catchment demographics and a weighted market score, ranked against comparable commercial locations.",href:"/contact"},
+      {t:"Population Health",d:"Disability, long-term conditions, qualifications, car dependency and overcrowding, expressed as ranked deviations from a national sample of 200 comparison catchments.",href:"/contact"},
+      {t:"Workforce",d:"Clinical and support workforce availability and pressure across the catchment, so a site decision accounts for whether it can actually be staffed.",href:"/contact"},
+      {t:"General Trends",d:"Wider market movement, demand and activity trends shaping the catchment over time, so the picture is not just a single snapshot.",href:"/contact"}
     ])}
     <p class="lbl reveal" style="margin-top:26px">New datasets are added on a rolling basis as sources are verified</p>
   </div></section>
@@ -200,9 +200,9 @@ P['/digital/straight-talking']=()=>page({
   <section><div class="wrap">
     ${shead("Positioning","Where we differ.","The market splits into outcome-measure specialists and experience-survey tools. The gap, and the value, is in the middle.")}
     ${indexList([
-      {t:"Capture rate first",d:"A validated instrument at a 12% response rate is weaker evidence than a well-designed journey capture at 60%. We optimise the surface, then layer the instruments onto it.",href:"#/contact"},
-      {t:"Whole journey, one spine",d:"Experience and outcome sit on the same record, so you can see which parts of the pathway move the outcome rather than guessing.",href:"#/contact"},
-      {t:"Mandated measures included",d:"PHIN and PROMs instruments are configuration on the existing spine, not a second system bolted alongside it.",href:"#/contact"}
+      {t:"Capture rate first",d:"A validated instrument at a 12% response rate is weaker evidence than a well-designed journey capture at 60%. We optimise the surface, then layer the instruments onto it.",href:"/contact"},
+      {t:"Whole journey, one spine",d:"Experience and outcome sit on the same record, so you can see which parts of the pathway move the outcome rather than guessing.",href:"/contact"},
+      {t:"Mandated measures included",d:"PHIN and PROMs instruments are configuration on the existing spine, not a second system bolted alongside it.",href:"/contact"}
     ])}
   </div></section>
   ${feature({soft:true,flip:true,head:"Built, demonstrable, launching October 2026",graphic:gDial(),body:`<p>The platform is a working codebase with a connected demo loop: submissions from the patient app appear live in the provider dashboard. We are running structured demonstrations with provider groups now, ahead of first-cohort launch.</p><p>If you report to PHIN, hold NHS contracts with PROMs obligations, or are building an outcomes case for an insurer negotiation, the first cohort is the conversation to have.</p>`})}`,
@@ -253,9 +253,9 @@ P['/digital/how-we-build']=()=>page({
   <section class="soft"><div class="wrap">
     ${shead("Delivery","What a build looks like.")}
     ${indexList([
-      {t:"Weeks 1 to 2 · Decide",d:"Surface map, data model and the one question the thing has to answer. Written down and signed off before a line of code.",href:"#/contact"},
-      {t:"Weeks 3 to 8 · First slice",d:"First usable capability into a production environment with real authentication and access control. Demonstrated live, not screenshotted.",href:"#/contact"},
-      {t:"Ongoing · Extend or hand over",d:"Further slices on the same spine, or handover to your team with the keys, the schema and the documentation.",href:"#/contact"}
+      {t:"Weeks 1 to 2 · Decide",d:"Surface map, data model and the one question the thing has to answer. Written down and signed off before a line of code.",href:"/contact"},
+      {t:"Weeks 3 to 8 · First slice",d:"First usable capability into a production environment with real authentication and access control. Demonstrated live, not screenshotted.",href:"/contact"},
+      {t:"Ongoing · Extend or hand over",d:"Further slices on the same spine, or handover to your team with the keys, the schema and the documentation.",href:"/contact"}
     ])}
   </div></section>`,
   ctaText:"Bring us the piece that keeps not getting built."
@@ -265,10 +265,10 @@ P['/digital/how-we-build']=()=>page({
 P['/insights']=()=>page({
   crumb:"Insights",title:"Insights.",lede:"Where we think the sport and health markets are moving, and what it means for the return.",
   body:`<section><div class="wrap">${indexList([
-    {t:"Health in 2026",d:"Self-pay is no longer a recession hedge. What sustained direct-to-consumer demand means for capacity planning, pricing and estate strategy.",href:"#/health"},
-    {t:"Your catchment is probably wrong",d:"A five-mile radius is not a catchment. Two providers a mile apart can serve entirely different populations, and drivetime sometimes changes the decision.",href:"#/digital/datalense"},
-    {t:"The capture-rate problem nobody names",d:"A validated outcome measure at a 12% response rate is weaker evidence than an unvalidated one at 60%. The sector optimised the instrument and ignored the surface.",href:"#/digital/straight-talking"},
-    {t:"Build the tool or write the deck",d:"Consultancies default to the deck because it is the billable artefact. If the recommendation only works when someone runs the analysis monthly, the deck is the wrong deliverable.",href:"#/digital"}
+    {t:"Health in 2026",d:"Self-pay is no longer a recession hedge. What sustained direct-to-consumer demand means for capacity planning, pricing and estate strategy.",href:"/health"},
+    {t:"Your catchment is probably wrong",d:"A five-mile radius is not a catchment. Two providers a mile apart can serve entirely different populations, and drivetime sometimes changes the decision.",href:"/digital/datalense"},
+    {t:"The capture-rate problem nobody names",d:"A validated outcome measure at a 12% response rate is weaker evidence than an unvalidated one at 60%. The sector optimised the instrument and ignored the surface.",href:"/digital/straight-talking"},
+    {t:"Build the tool or write the deck",d:"Consultancies default to the deck because it is the billable artefact. If the recommendation only works when someone runs the analysis monthly, the deck is the wrong deliverable.",href:"/digital"}
   ])}</div></section>`
 });
 P['/featured-insights']=P['/insights'];P['/our-approach']=P['/consultancy'];P['/talk']=P['/insights'];
@@ -294,7 +294,7 @@ ${feature({graphic:gNetwork(),body:`<p>With expertise spanning sport, healthcare
     "<b>The Sponsor Collective</b> — sponsorship frameworks for clubs from grassroots to elite."
   ],true)}
 </div></section>
-${feature({soft:false,flip:true,tag:"Our platforms",head:"Three products that earn",graphic:gArea(),body:`<p>Knexu develops and operates its own products where a market gap is clear and the advisory work has already proven the need.</p><p><strong>DataLense</strong> is live, delivering healthcare commercial intelligence. <strong>Straight Talking</strong> launches in October 2026 as a patient-reported outcomes platform. <strong>Knexusport</strong> is in service across professional football, cricket and rugby.</p>`,link:["The practice","#/digital"]})}`;
+${feature({soft:false,flip:true,tag:"Our platforms",head:"Three products that earn",graphic:gArea(),body:`<p>Knexu develops and operates its own products where a market gap is clear and the advisory work has already proven the need.</p><p><strong>DataLense</strong> is live, delivering healthcare commercial intelligence. <strong>Straight Talking</strong> launches in October 2026 as a patient-reported outcomes platform. <strong>Knexusport</strong> is in service across professional football, cricket and rugby.</p>`,link:["The practice","/digital"]})}`;
 
 P['/contact']=()=>`
 <div class="phead"><div class="wrap">
@@ -337,9 +337,9 @@ P['/contact']=()=>`
 
 P['/404']=()=>page({crumb:"Not found",title:"That page does not exist.",lede:"The link is wrong or the page has moved.",
   body:`<section><div class="wrap">${indexList([
-    {t:"Consultancy",d:"Three areas, three sectors, one measure.",href:"#/consultancy"},
-    {t:"Digital infrastructure",d:"Our platforms and bespoke builds.",href:"#/digital"},
-    {t:"Work",d:"Outcomes we have delivered.",href:"#/work"}
+    {t:"Consultancy",d:"Three areas, three sectors, one measure.",href:"/consultancy"},
+    {t:"Digital infrastructure",d:"Our platforms and bespoke builds.",href:"/digital"},
+    {t:"Work",d:"Outcomes we have delivered.",href:"/work"}
   ])}</div></section>`});
 
 /* legacy */
