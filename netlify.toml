@@ -2,6 +2,15 @@
   command = "npm run build"
   publish = "dist"
 
+# Canonical host: send the raw Netlify subdomain to the custom domain
+# (avoids a public duplicate of the site and duplicate-content SEO issues).
+[[redirects]]
+  from = "https://knexu.netlify.app/*"
+  to = "https://knexu.co.uk/:splat"
+  status = 301
+  force = true
+
+# SPA fallback — non-forced, so prerendered per-route files serve first.
 [[redirects]]
   from = "/*"
   to = "/index.html"
