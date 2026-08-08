@@ -1,10 +1,9 @@
 /* =====================================================================
-   FORMS — contact form submission to Netlify Forms.
+   FORMS — contact form submission.
    The form is rendered by the SPA router, so we bind one delegated
-   submit listener that survives route changes. Submissions POST the
-   URL-encoded body (including form-name=contact) to "/", which Netlify
-   captures; email notification to hello@knexu.co.uk is configured once
-   in the Netlify dashboard (Site → Forms → notifications).
+   submit listener that survives route changes. Submissions POST JSON to
+   the Vercel serverless function /api/contact, which emails hello@ via
+   Resend (see api/contact.js).
    ===================================================================== */
 export function initForms(){
   document.addEventListener('submit',async e=>{
@@ -17,8 +16,8 @@ export function initForms(){
     if(btn)btn.disabled=true;
     setStatus('Sending…');
     try{
-      const body=new URLSearchParams(new FormData(form)).toString();
-      const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
+      const payload=Object.fromEntries(new FormData(form).entries());
+      const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
       if(!res.ok)throw new Error('status '+res.status);
       form.reset();
       setStatus("Thanks — that's with us. We'll reply to the email you gave, usually within a day or two.",'ok');

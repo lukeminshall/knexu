@@ -304,9 +304,8 @@ P['/contact']=()=>`
 </div></div>
 <section><div class="wrap">
   ${shead("Start here","Send us a note.","Name, email and the messy version of what you are trying to move. It comes straight to us, and we usually reply within a day or two.")}
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form" class="cform reveal">
-    <input type="hidden" name="form-name" value="contact">
-    <p class="hp" hidden><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <form id="contact-form" class="cform reveal" novalidate>
+    <p class="hp" hidden aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
     <div class="cfield">
       <label for="cf-name">Your name</label>
       <input id="cf-name" name="name" type="text" required autocomplete="name">
