@@ -265,11 +265,25 @@ P['/digital/how-we-build']=()=>page({
 P['/insights']=()=>page({
   crumb:"Insights",title:"Insights.",lede:"Where we think the sport and health markets are moving, and what it means for the return.",
   body:`<section><div class="wrap">${indexList([
+    {t:"Knexu is becoming Minshall Group",sub:"Announcement · October 2026",d:"We are undertaking the sale of one of our assets, and moving the brand and the business forward as Minshall Group, at minshallgroup.com. The work does not change — the name on it will.",href:"/insights/minshall-group"},
     {t:"Health in 2026",d:"Self-pay is no longer a recession hedge. What sustained direct-to-consumer demand means for capacity planning, pricing and estate strategy.",href:"/health"},
     {t:"Your catchment is probably wrong",d:"A five-mile radius is not a catchment. Two providers a mile apart can serve entirely different populations, and drivetime sometimes changes the decision.",href:"/digital/datalense"},
     {t:"The capture-rate problem nobody names",d:"A validated outcome measure at a 12% response rate is weaker evidence than an unvalidated one at 60%. The sector optimised the instrument and ignored the surface.",href:"/digital/straight-talking"},
     {t:"Build the tool or write the deck",d:"Consultancies default to the deck because it is the billable artefact. If the recommendation only works when someone runs the analysis monthly, the deck is the wrong deliverable.",href:"/digital"}
   ])}</div></section>`
+});
+P['/insights/minshall-group']=()=>page({
+  crumb:"Insights · Announcement",
+  title:"Knexu is becoming Minshall Group.",
+  lede:"We are undertaking the sale of one of our assets, and moving the brand and the business forward as Minshall Group, at minshallgroup.com. The work does not change. The name on it will.",
+  body:`<section><div class="wrap"><div class="prose mid reveal">
+    <p>Knexu is undertaking the sale of one of its assets. As part of that process, we are transitioning the brand and our trading to a new name: <strong>Minshall Group</strong>, at <strong>minshallgroup.com</strong>.</p>
+    <p>Nothing about how we work changes. The same people, the same approach, and the same measure: the return. Our consultancy across sport, health and wellbeing, and the digital infrastructure we build and operate, continue exactly as they are.</p>
+    <p>A transition like this takes a little time to do properly — the sale itself, the contracts, the systems and the careful handover each one requires. We are moving through it as quickly as we responsibly can, and you may see both names in use while we do. Where you see Knexu today, read Minshall Group.</p>
+    <p>If you are already working with us, your engagement carries over unchanged. If you want to start something, nothing is on hold: <a href="/contact" style="color:var(--ink);border-bottom:1px solid var(--pink);text-decoration:none">get in touch</a> and we will pick it up under whichever name we have reached by the time you read this.</p>
+    <p class="lbl" style="margin-top:14px">Published October 2026</p>
+  </div></div></section>`,
+  ctaText:"Same team, same measure, under a new name."
 });
 P['/featured-insights']=P['/insights'];P['/our-approach']=P['/consultancy'];P['/talk']=P['/insights'];
 

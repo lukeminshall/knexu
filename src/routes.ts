@@ -69,6 +69,10 @@ export const ROUTES = {
     title: 'Insights — where the sport and health markets are moving | Knexu',
     description: 'Views on self-pay demand, catchment analysis, patient-reported capture rates, and building the tool instead of writing the deck.'
   },
+  '/insights/minshall-group': {
+    title: 'Knexu is becoming Minshall Group | Knexu',
+    description: 'Knexu is undertaking the sale of one of its assets and transitioning the brand and business to Minshall Group (minshallgroup.com). Same team, same approach, same measure: the return.'
+  },
   '/about': {
     title: 'About — a growth agency measured on the return | Knexu',
     description: 'Knexu designs targeted strategies across sport, health and wellbeing, and builds the digital infrastructure that makes them earn.'
